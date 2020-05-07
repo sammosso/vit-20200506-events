@@ -1,13 +1,29 @@
+//Create fortune array
+let fortunes = ['great life', 'bad life', 'long life', 'short life'];
+
 document.addEventListener('DOMContentLoaded', function(){
     // create HTML element
     let message = document.createElement('p');
     message.innerHTML = "hello";
     console.log(message)
 
+    // add button
+    let button = document.createElement('button');
+    button.innerHTML = 'Click me'
+
     // access the div.root
     let root = document.querySelector('#root');
-    console.log(root);
 
     //append a child
     root.appendChild(message);
+    root.appendChild(button);
+
+    //Click Event Button
+    button.addEventListener('click', function(){
+        //grab random message from fortunes
+        let random = fortunes[Math.floor(Math.random() * fortunes.length)];
+
+        //fill in message with fortune innerHTML
+        message.innerHTML = random;
+    })
 })
