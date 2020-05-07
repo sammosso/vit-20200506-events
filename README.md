@@ -1,2 +1,2 @@
 # vit-20200506-events
-JS practice with Events
+JS practice with Events. JS Broilerplate.
