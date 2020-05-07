@@ -1,5 +1,6 @@
 //Create fortune array
 let fortunes = ['great life', 'bad life', 'long life', 'short life'];
+let colors = ['purple', 'yellow', 'green', 'blue', 'red']
 
 document.addEventListener('DOMContentLoaded', function(){
     // create HTML element
@@ -21,9 +22,11 @@ document.addEventListener('DOMContentLoaded', function(){
     //Click Event Button
     button.addEventListener('click', function(){
         //grab random message from fortunes
-        let random = fortunes[Math.floor(Math.random() * fortunes.length)];
-
+        let randomNumber = Math.floor(Math.random() * fortunes.length);
+        let randomFortune = fortunes[randomNumber];
+        let randomColor = colors[randomNumber];
         //fill in message with fortune innerHTML
-        message.innerHTML = random;
+        message.innerHTML = randomFortune;
+        message.style.color = randomColor;
     })
 })
